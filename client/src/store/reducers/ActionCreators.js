@@ -6,7 +6,7 @@ export const getTodoList = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const {sortType, sortDirection, currentPage} = thunkAPI.getState().todoReducer;
-            const response = await axios.get('http://localhost:4000/api/todo/', {
+            const response = await axios.get(`http://${window.location.hostname}:4000/api/todo/`, {
                 params: {
                     type: sortType,
                     direction: sortDirection,
