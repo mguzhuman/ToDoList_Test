@@ -1,0 +1,24 @@
+.block {
+    min-height: 150px;
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text_field{
+    margin: 5px 0;
+}
+
+.text {
+    height: 100%;
+    flex: 1;
+}

@@ -1,0 +1,8 @@
+.App {
+    max-width: 1200px;
+    margin: auto;
+}
+.Header {
+    display: flex;
+    justify-content: space-between;
+}
