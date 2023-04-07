@@ -18,11 +18,11 @@ const TodoItem = ({item}) => {
     return (
         <Paper className={classes.block} elevation={6}>
             <div className={classes.header}>
-                <div className={classes.about}>
-                    <p className={classes.text_field}>Имя: {item.name}</p>
-                    <p className={classes.text_field}>Email: {item.email}</p>
+                <div >
+                    <p className={classes.text_field}><b>Имя:</b> {item.name}</p>
+                    <p className={classes.text_field}><b>Email:</b> {item.email}</p>
                 </div>
-                <div className={classes.buttons}>
+                <div>
                     {isAdmin &&
                         <IconButton color='success' aria-label="edit" size="large" onClick={handleOpenUpdatePopup}>
                             <EditIcon fontSize="inherit"/>
@@ -38,12 +38,14 @@ const TodoItem = ({item}) => {
                 </div>
             </div>
             <div className={classes.text}>
-                <p className={classes.text_field}>Текст задачи:</p>
+                <p className={classes.text_field}><b>Текст задачи: </b></p>
                 {item.text}
             </div>
 
             <div className={classes.status}>
-                Статус: {item.ischanged ? 'отредактировано администратором ' : ''}{item.isready ? ' выполнено' : ''}
+                <b>Статус:</b>
+                {item.ischanged ? <p className={classes.text_field}>отредактировано администратором</p> : null}
+                {item.isready ? <p className={classes.text_field}>выполнено</p> : null}
             </div>
         </Paper>
     );
